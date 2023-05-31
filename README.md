@@ -6,6 +6,8 @@ Here I have used JWT for the authentication of the user.
 
 HLD included with name "HLD.txt"
 
+Encryption method I have used contains my personal encryption key, while uploading replaced it with "your key"
+
 
 Requirements:
 
