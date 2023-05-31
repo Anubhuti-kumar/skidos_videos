@@ -1,0 +1,46 @@
+High-Level Design (HLD) for Video on Demand Backend Microservice:
+
+System Architecture:
+
+The Video on Demand backend microservice will follow a microservices architecture pattern.
+It will consist of multiple components that work together to provide the required functionalities.
+
+
+The major components include:
+Authentication Service: Handles user authentication and authorization.
+Video Service: Manages video content, streaming, encryption, and search functionality.
+Database: Stores video metadata, user information, and session data.
+CDN (Content Delivery Network): Delivers video content efficiently to end-users.
+Video Transcoding Service: Performs adaptive bitrate streaming by transcoding videos into multiple quality levels.
+
+
+Authentication and Authorization:
+Users need to authenticate before accessing videos.
+Use a secure authentication mechanism such as JWT (JSON Web Tokens).
+The Authentication Service will verify user credentials, generate and validate tokens.
+Tokens will be passed in API requests for authorization.
+
+
+Video Storage and Encoding:
+Store videos in a scalable and distributed storage system.
+Use a file storage service or cloud-based storage solution.
+Videos should be encoded into multiple bitrate versions (adaptive bitrate streaming).
+Transcoding service will convert videos to various resolutions and bitrates for adaptive streaming.
+
+
+Video Encryption:
+Implement video encryption to protect content from unauthorized access.
+Use encryption algorithms to secure video files at rest and during transmission.
+Generate unique encryption keys for each video.
+
+
+Video Metadata and Search:
+Maintain a database to store video metadata, including title, description, duration, resolution, and encryption keys.
+Implement a search feature to allow users to search for videos based on keywords, categories, or tags.
+Utilize a search engine or database indexing for efficient search operations.
+
+
+Content Delivery:
+Utilize a CDN to efficiently deliver video content to end-users worldwide.
+CDN caches videos at edge locations, reducing latency and improving streaming performance.
+Implement video streaming protocols like HLS (HTTP Live Streaming) or DASH (Dynamic Adaptive Streaming over HTTP).
