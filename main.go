@@ -21,8 +21,8 @@ func main() {
 	router := gin.Default()
 
 	// Define the routes for user authentication and token validation
-	router.POST("/api/authenticate", userController.Authenticate)
-	router.POST("/api/validateToken", userController.ValidateToken)
+	router.POST("/api/authenticate", userController.Authenticate)		     //done
+	router.POST("/api/validateToken", userController.ValidateToken)              //done
 
 	// Initialize the video controller with the database connection
 	videoController := controllers.NewVideoController(db)
